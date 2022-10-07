@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Q.1): Show implementation of transformation ?</h2>
+    <div class="para1">
+        CSS transforms are a collection of functions that allow to shape elements in particular ways:
+        <ul class="transform">
+            <li><b>translate:</b> moves the element along up to 3 axis (x, y and z)</li> 
+            <li><b>rotate:</b> moves the element around a central point</li> 
+            <li><b>scale:</b> resizes the element</li> 
+            <li><b>skew:</b> distorts the element</li> 
+        </ul>
+    </div>
+    <div class="move"></div>
+    <br> <br>
+    <div class="move1"></div><br><br><br><br> <br> <br> <hr>
+    <h2>Q.2: Show implementation of transition ?</h2>
+    <div class="t-move"></div> <hr>
+    <h2>Q.3): Show implementation of grid ?</h2>
+    <div class="container">
+        <div class="no no1">1</div>
+        <div class="no no2">2</div>
+        <div class="no no3">3</div>
+        <div class="no no4">4</div>
+        <div class="no no5">5</div>
+        <!-- <div class="no no6">6</div> -->
+    </div> <br>  <hr>
+    <h2>Q.4): What are CSS combinators ?</h2>
+    <div class="para1">
+        Combinators combine the selectors to provide them a useful relationship and the position of content in the document. This comes in handy when you want to style certain elements all at once rather than styling elements individually. CSS combinator selectors are as follows.
+        <ol>
+            <li>Descendent Selector (space)</li>
+            <li>Child Selector (>)</li>
+            <li>Adjacent Sibling Selector (+)</li>
+            <li>General Sibling Selector (~)</li>
+        </ol>
+        <b>1. <u>Descendant Selector</u> </b> :  The descendant selector matches all elements that are descendants of a  specified element.
+    </div>
+    <div>
+        <h2>Hello World!</h2>
+        <p>I am child paragraph first.</p>
+        <p>I am child paragraph second.</p>
+    </div>
+    <pre class="pre1">
+        In this div is the parent and p is the child so all the p tags i.e. child tags 
+        will get blue color, font-size will be xx-larger and font-weight will be bolder.
+    </pre>
+    <p class="para1">
+        <b>2. <u>Child Selector</u></b> : The child selector will only affect elements under a direct parent. A good way to remember this is that a child will only listen to its direct parents.
+    </p>
+    <div class="second">
+        <h2>This heading is a direct child of the div tag.</h2>
+        <p>So is this paragraph tag.</p>
+        <button>
+            <p>This paragraph tag is NOT a direct child of the first div</p>
+        </button>
+        <p>This paragraph tag is also a child of the div tag</p>
+    </div>
+    <pre class="pre1">
+        In this, h2 will change the color because we have used .second > p. So in 
+        this case the direct childs of class second i.e. p tags will change the 
+        color of text to red only.
+    </pre>
+    <p class="para1">
+        <b>3. <u>Adjacent Sibling Selector</u></b> : To use the adjacent sibling selector in your CSS stylesheet, you simply need the plus (+) sign. The adjacent sibling selector is used to select an element that is directly after another specific element
+    </p>
+    <div>
+        <h2 class="third">This is a H2 tag.</h2>
+        <p>This p tag immediately follows the heading.</p>
+        <button>
+            <p>This p tag is NOT immediately following a H2 tag.</p>
+        </button>
+        <h2 class="third">Howdy! This is another H2 tag.</h2>
+        <p>This p tag is after another H2 tag and gets formatted.</p>
+    </div>
+    <pre class="pre1">
+        In this, the color of  direct child tags i.e. p tags that are immediately
+         after the h2 tag of class third will change the color to yellowgreen.
+    </pre>
+    <p class="para1">
+        <b>4. <u>General Sibling Selector</u></b> : The general sibling selector follows through on all elements under the targeted HTML element selected. This means that if another element tag interrupts the direct adjacent flow, the style rules can still follow through.
+    </p>
+    <div>
+        <h2>I am heading tag!</h2>
+        <p>I am paragraph tag 1.</p>
+        <button class="btn">
+            <p>I am a paragraph tag inside a button!</p>
+        </button>
+        <p>I am paragraph tag 2.</p>
+        <p>I am paragraph tag 3.</p>
+        <h3>I am another heading tag!</h3>
+        <p>I am paragraph tag 4.</p>
+    </div>
+    <pre class="pre1">
+        In this, the color of all the p tags which are after the button of class btn will change into teal.
+        The paragraph which comes after the h3 tag will also get teal color.
+    </pre> <hr> <br>
+    <h2>Q.5): What are pseudo selectors in CSS ?</h2>
+    <p class="para1">
+        CSS pseudo-classes are used to add styles to selectors, but only when those selectors meet certain conditions. A pseudo class is expressed by adding a colon (:) after a selector in CSS, followed by a pseudo-class such as "hover", "focus", or "active", like this:
+
+        <pre class="pre1">
+            Syntax: 
+                    selector:pseudo-class {
+                    property : value;
+                }
+        </pre>
+    </p>
+    <p class="para1">
+        Some Examples of Pseudo Classes:
+    </p>
+    <table>
+        <tr>
+            <th>:active</th>
+            <td>It is used to add style to an active element.</td>
+        </tr>
+        <tr>
+            <th>:hover</th>
+            <td>It adds special effects to an element when the user moves the mouse pointer over the element.</td>
+        </tr>
+        <tr>
+            <th>:link</th>
+            <td>It adds style to the unvisited link.</td>
+        </tr>
+        <tr>
+            <th>:visited</th>
+            <td>It adds style to a visited link.</td>
+        </tr>
+        <tr>
+            <th>:lang</th>
+            <td>It is used to define a language to use in a specified element.</td>
+        </tr>
+        <tr>
+            <th>:focus</th>
+            <td>It selects the element which is focussed by the user currently.</td>
+        </tr>
+        <tr>
+            <th>:first-child</th>
+            <td>It adds special effects to an element, which is the first child of another element.</td>
+        </tr>
+    </table> <br> <br>
+   
+</body>
+</html>
